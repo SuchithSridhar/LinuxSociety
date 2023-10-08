@@ -1,0 +1,106 @@
+header {
+  display: flex;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  padding-top: 30px;
+  padding-right: 60px;
+  padding-left: 60px;
+  justify-content: space-between;
+}
+
+.nav-banner { 
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: var(--button-font);
+  letter-spacing: 4px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  transition: border 0.3s ease;
+  color: var(--nav-link-fg-color);
+  background-color: var(--nav-link-bg-color);
+  border: var(--nav-link-bg-color) solid 1px;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-banner:hover {
+  border: var(--nav-link-fg-color) solid 1px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: var(--button-font);
+  letter-spacing: 4px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  transition: border 0.3s ease;
+}
+
+.nav-link-type-1 {
+  color: var(--nav-link-fg-color);
+  background-color: var(--nav-link-bg-color);
+  border: var(--nav-link-bg-color) solid 1px;
+}
+
+.nav-link-type-1:hover {
+  border: var(--nav-link-fg-color) solid 1px;
+}
+
+.nav-link-type-2 {
+  color: var(--nav-link-alt-fg-color);
+  background-color: var(--nav-link-alt-bg-color);
+  border: var(--nav-link-alt-bg-color) solid 1px;
+}
+
+.nav-link-type-2:hover {
+  border: var(--nav-link-alt-hi-color) solid 1px;
+  background-color: var(--button-bg-hover-color);
+}
+
+@media only screen and (max-width: 980px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+  .nav-banner {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  nav {
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 10px;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+  .nav-banner {
+    font-size: 1rem;
+  }
+}

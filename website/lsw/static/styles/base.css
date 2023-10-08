@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--regular-font);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 95vh;
+  margin: 0;
+}
+
+main {
+  min-height: 82vh;
+}
+
+.highlight-text {
+  color: var(--highlight-text-color);
+}

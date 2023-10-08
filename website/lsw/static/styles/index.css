@@ -1,0 +1,176 @@
+.arrow-container {
+  height: 70px;
+}
+
+.arrow {
+  bottom: 20px;
+  width: 0;
+  height: 0;
+  display: absolute;
+  margin: 5px auto 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid var(--highlight-text-color);
+  animation: bobbing 2s infinite;
+}
+
+.main-content {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  min-height: 85vh;
+}
+
+.main-content h1 {
+  font-family: var(--header-font);
+  font-size: 6rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.main-content p {
+  font-size: 1.7rem;
+  margin: 10px;
+  font-weight: 400;
+}
+
+.main-content button {
+  border: none;
+  padding: 15px 30px;
+  margin-top: 30px;
+  font-family: var(--button-font);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  cursor: pointer;
+  color: var(--button-fg-color);
+  background-color: var(--button-bg-color);
+  border: var(--button-bg-color) solid 1px;
+  transition: background-color 0.3s ease;
+  transition: border 0.3s ease;
+}
+
+.main-content button:hover {
+  background-color: var(--button-bg-hover-color);
+  border: var(--nav-link-alt-hi-color) solid 1px;
+}
+
+.about {
+  color: var(--alt-text-color);
+  background-color: var(--alt-background-color);
+  padding: 80px 12vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+      "about-title about-title about-title"
+      "content-1 content-1 blankspace-1"
+      "blankspace-2 content-2 content-2";
+}
+
+.about h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 10px;
+  padding: 10px 20px;
+  margin: 0;
+  grid-area: about-title;
+  border-bottom: 1px solid black;
+}
+
+.about p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.about .content-1 {
+  grid-area: content-1;
+}
+
+.about .content-2 {
+  grid-area: content-2;
+}
+
+.about .blankspace-1 {
+  grid-area: blankspace-1;
+}
+
+.about .blankspace-2 {
+  grid-area: blankspace-2;
+}
+
+@media only screen and (max-width: 980px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .main-content h1 {
+    font-size: 4rem;
+  }
+
+  .main-content p {
+    font-size: 1.4rem;
+  }
+
+  .main-content button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .main-content h1 {
+    font-size: 3rem;
+  }
+
+  .main-content {
+    min-height: 70vh;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+  }
+
+  .main-content button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .arrow-container {
+    height: 170px;
+  }
+
+  .about {
+    color: var(--alt-text-color);
+    background-color: var(--alt-background-color);
+    padding: 30px 5vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "about-title"
+        "content-1"
+        "content-2";
+  }
+
+  .about h3 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .about p {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+}
+
+@keyframes bobbing {
+  0% {
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}

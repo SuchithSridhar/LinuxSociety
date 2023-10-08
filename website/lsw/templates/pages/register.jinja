@@ -1,0 +1,44 @@
+{% extends 'layout.jinja' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/pages/register.css') }}" class="css">
+{% endblock head %}
+
+{% block body %}
+
+<h1>
+    <span>
+        Registration
+    </span>
+</h1>
+
+<form action="" method='post'>
+    <div class="form-group">
+        <label for='name'>Name</label>
+        <input name='name' type="text">
+    </div>
+
+    <div class="form-group">
+        <label for='primary-email'>Primary Email</label>
+        <input name='primary-email' type="text" placeholder='abc.xyz@exmaple.com'>
+        <small class="form-text">Can be the same as University Email</small>
+    </div>
+
+    <div class="form-group">
+        <label for='university-email'>University Email <span class='form-text'>(optional)</span> </label>
+        <input name='university-email' type="text" placeholder='abc.xyz@dal.ca'>
+    </div>
+
+    <div class="form-group">
+        <label for='student-id'>Student ID <span class='form-text'>(optional)</span>  </label>
+        <input name='student-id' type="text" placeholder="B00111111">
+    </div>
+
+    <div class="form-group">
+        <label for='degree'>Program <span class='form-text'>(optional)</span>  </label>
+        <input name='degree' type="text" placeholder="Bachelors of Computer Science">
+    </div>
+
+    <button type='submit' class='submit-btn'>Register</button>
+</form>
+{% endblock body %}

@@ -1,0 +1,14 @@
+<header>
+    <nav>
+        <div class='banner-container'>
+        {% if page != 'index' %}
+            <a href="{{ url_for('main.index') }}" class="nav-banner"><span class='highlight-text'>$</span> Linux Society</a>
+        {% endif %}
+        </div>
+
+        <div class='nav-links'>
+            <a href="{{ url_for('main.index') }}#about" class="nav-link nav-link-type-1">About Us</a>
+            <a href="{{ url_for('main.register') }}" class="nav-link nav-link-type-2">JOIN</a>
+        </div>
+    </nav>
+</header>
