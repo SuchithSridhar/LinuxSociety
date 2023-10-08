@@ -1,10 +1,8 @@
 import flask as f
-from ...config import Config
+
+main_blueprint = f.Blueprint('main', __name__)
 
 
-main_bp = f.Blueprint('main', __name__)
-
-
-@main_bp.route('/')
+@main_blueprint.route('/')
 def index():
     return f.render_template('index.jinja')

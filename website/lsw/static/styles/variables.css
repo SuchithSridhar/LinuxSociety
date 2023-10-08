@@ -1,0 +1,19 @@
+:root {
+  --background-color: #1a1a1a;
+  --text-color: white;
+  --alt-background-color: #75d978;
+  --alt-text-color: #1a1a1a;
+  --nav-link-bg-color: #1a1a1a;
+  --nav-link-fg-color: white;
+  --nav-link-alt-bg-color: #49cf4e;
+  --nav-link-alt-fg-color: #1a1a1a;
+  --nav-link-alt-hi-color: white;
+  --button-bg-color: #49cf4e;
+  --button-fg-color: #1a1a1a;
+  --button-bg-hover-color: #45a049;
+  --highlight-text-color: #49cf4e;
+  --header-font: 'DM Serif Display', serif;
+  --regular-font: Georgia, 'Times New Roman', Times, serif;
+  --button-font: 'Noto Serif', serif;
+}
+

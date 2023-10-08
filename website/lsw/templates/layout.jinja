@@ -3,12 +3,22 @@
     <head>
         <title>Linux Society</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/variables.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/navbar.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/components/footer.css') }}">
+
         {% block head %}
         {% endblock head %}
     </head>
+
     <body>
+        {% include 'components/navbar.jinja' %}
+
         {% block body %}
         {% endblock body %}
+
+        {% include 'components/footer.jinja' %}
     </body>
 </html>

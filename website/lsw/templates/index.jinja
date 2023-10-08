@@ -1,5 +1,54 @@
 {% extends 'layout.jinja' %}
 
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+{% endblock head %}
+
 {% block body %}
-    <h1>Linux Society</h1>
+
+<main>
+    <section class="main-content">
+        <div class="content-container">
+            <h1>
+                <span class='highlight-text'>$</span> 
+                The <span class='highlight-text'>Linux</span> Society
+            </h1>
+            <p>
+                Embrace the <span class='highlight-text'>Freedom</span>,
+                Cultivate the Craft,
+            </p>
+            <p>
+                Push the Boundaries of
+                <span class='highlight-text'>Customization</span>.
+            </p>
+            <button>JOIN US</button>
+        </div>
+    </section>
+
+    <div class="arrow-container">
+        <div class="arrow"></div>
+    </div>
+
+    <section class="about">
+        <h3>About Us</h3>
+        <p class='content-1'>
+            At The Linux Society, we're enthusiastic about the expansive world of open-source software. Our community, brimming
+            with tech enthusiasts, comes together at events that cater to both Linux experts and newcomers alike. These
+            gatherings aren't just meetings, but hubs of shared knowledge and innovation. From hands-on workshops to insightful
+            meetups, collaboration is at the heart of what we do.
+        </p>
+
+        <div class="blankspace-1"></div>
+        
+        <p class='content-2'>
+            We also deeply value customization and personal tech expression. Our events often spotlight members' unique Linux
+            configurations, offering glimpses into both artful desktop designs and robust server setups. Whether you're
+            fascinated by sleek UI designs or intricate kernel adjustments, The Linux Society is where inspiration meets
+            exploration.
+        </p>
+
+        <div class="blankspace-2"></div>
+    </section>
+</main>
+
 {% endblock body %}
