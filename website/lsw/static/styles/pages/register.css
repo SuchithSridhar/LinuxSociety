@@ -1,0 +1,118 @@
+:root {
+  --input-text-color: white;
+  --input-background-color: #2a2a2a;
+  --input-border-color: #4a4a4a;
+  --input-border-color-alt: #49cf4e;
+  --input-subtext-color: #8a8a8a;
+}
+
+h1 {
+  letter-spacing: 2px;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+h1 span {
+  display: inline-block;
+  padding-bottom: 10px;
+  width: min(80vw, 900px);
+  border-bottom: 2px solid var(--input-border-color);
+  animation: 4s infinite pulse;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 150px;
+  gap: 20px;
+}
+
+form .form-group {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  width: min(80vw, 900px);
+}
+
+form .form-group label {
+  font-size: 1.4rem;
+  padding-left: 10px;
+}
+
+form .form-group input {
+  font-size: 1.5rem;
+  color: var(--input-forground-color);
+  background-color: var(--input-background-color);
+  border: 2px var(--input-border-color) solid;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+form .form-group input:focus {
+  animation: 4s infinite pulse;
+  outline-width: 0;
+}
+
+form .form-group .form-text {
+  font-size: 0.8rem;
+  padding-left: 10px;
+  color: var(--input-subtext-color);
+}
+
+form button {
+  border: none;
+  padding: 15px 30px;
+  margin-top: 10px;
+  font-family: var(--button-font);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  cursor: pointer;
+  color: var(--button-fg-color);
+  background-color: var(--button-bg-color);
+  border: var(--button-bg-color) solid 1px;
+  transition: background-color 0.3s ease;
+  transition: border 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--button-bg-hover-color);
+  border: var(--nav-link-alt-hi-color) solid 1px;
+}
+
+@media only screen and (max-width: 980px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+
+  form .form-group input {
+    font-size: 1.2rem;
+  }
+
+  form button {
+    font-size: 1.2rem;
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    border-color: var(--input-border-color-alt);
+  }
+  50% {
+    border-color: var(--input-border-color);
+  }
+  100% {
+    border-color: var(--input-border-color-alt);
+  }
+}

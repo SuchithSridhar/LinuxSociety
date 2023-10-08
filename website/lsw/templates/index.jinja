@@ -6,49 +6,58 @@
 
 {% block body %}
 
-<main>
-    <section class="main-content">
-        <div class="content-container">
-            <h1>
-                <span class='highlight-text'>$</span> 
-                The <span class='highlight-text'>Linux</span> Society
-            </h1>
-            <p>
-                Embrace the <span class='highlight-text'>Freedom</span>,
-                Cultivate the Craft,
-            </p>
-            <p>
-                Push the Boundaries of
-                <span class='highlight-text'>Customization</span>.
-            </p>
-            <button>JOIN US</button>
-        </div>
-    </section>
-
-    <div class="arrow-container">
-        <div class="arrow"></div>
+<section class="main-content">
+    <div class="content-container">
+        <h1>
+            <span class='highlight-text'>$</span> 
+            The <span class='highlight-text'>Linux</span> Society
+        </h1>
+        <p>
+            Embrace the <span class='highlight-text'>Freedom</span>,
+            Cultivate the Craft,
+        </p>
+        <p>
+            Push the Boundaries of
+            <span class='highlight-text'>Customization</span>.
+        </p>
+        <button id="join-us-button">JOIN US</button>
     </div>
+</section>
 
-    <section class="about">
-        <h3>About Us</h3>
-        <p class='content-1'>
-            At The Linux Society, we're enthusiastic about the expansive world of open-source software. Our community, brimming
-            with tech enthusiasts, comes together at events that cater to both Linux experts and newcomers alike. These
-            gatherings aren't just meetings, but hubs of shared knowledge and innovation. From hands-on workshops to insightful
-            meetups, collaboration is at the heart of what we do.
-        </p>
+<div class="arrow-container">
+    <div class="arrow"></div>
+</div>
 
-        <div class="blankspace-1"></div>
-        
-        <p class='content-2'>
-            We also deeply value customization and personal tech expression. Our events often spotlight members' unique Linux
-            configurations, offering glimpses into both artful desktop designs and robust server setups. Whether you're
-            fascinated by sleek UI designs or intricate kernel adjustments, The Linux Society is where inspiration meets
-            exploration.
-        </p>
+<section id="about" class="about">
+    <h3>About Us</h3>
+    <p class='content-1'> At the <strong>Linux Society</strong>, we're
+    enthusiastic about the expansive world of <strong>open-source
+    software</strong>. Our community, brimming with tech enthusiasts, comes
+    together at events that cater to both <strong>Linux experts and
+    newcomers</strong> alike. These gatherings aren't just meetings, but
+    hubs of shared knowledge and innovation. From hands-on workshops to
+    insightful meetups, collaboration is at the <strong>heart of what we
+    do</strong>. </p>
 
-        <div class="blankspace-2"></div>
-    </section>
-</main>
+    <div class="blankspace-1"></div>
+    
+    <p class='content-2'> We also deeply value <strong>customization and
+    personal tech expression</strong>. Our events often spotlight members'
+    unique Linux configurations, offering glimpses into both artful desktop
+    designs and robust server setups. Whether you're fascinated by
+    <strong>sleek UI</strong> designs or <strong>intricate kernel
+    adjustments</strong>, the Linux Society is where inspiration meets
+    exploration. </p>
+
+    <div class="blankspace-2"></div>
+</section>
 
 {% endblock body %}
+
+{% block script %}
+<script>
+document.getElementById("join-us-button").onclick = function () {
+    location.href = "{{ url_for('main.register') }}";
+}; 
+</script>
+{% endblock script %}
