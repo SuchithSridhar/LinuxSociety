@@ -142,8 +142,6 @@
   }
 
   .about {
-    color: var(--alt-text-color);
-    background-color: var(--alt-background-color);
     padding: 30px 5vw;
     display: grid;
     grid-template-columns: 1fr;
