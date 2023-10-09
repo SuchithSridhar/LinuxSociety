@@ -19,14 +19,18 @@ def initialize_database(db, app):
 def create_app(config_class=Config):
 
     from .controllers.main.routes import main_blueprint
+    from .controllers.user.routes import user_blueprint
 
     app = f.Flask(__name__)
     app.config.from_object(config_class)
 
-    # db.init_app(app)
-    # login_manager.init_app(app)
-    # migrate.init_app(app, db)
+    db.init_app(app)
+    login_manager.init_app(app)
+    migrate.init_app(app, db)
+
+    initialize_database(db, app)
 
     app.register_blueprint(main_blueprint)
+    app.register_blueprint(user_blueprint)
 
     return app

@@ -1,3 +1,4 @@
+import datetime
 import hashlib
 import base64
 import uuid
@@ -17,16 +18,6 @@ class Utils:
         return base64.urlsafe_b64encode(hasher.digest()).decode('UTF-8')
 
     @staticmethod
-    def get_pre_render_data(flask, lang="en"):
-        stream = open(f'suchiblog/config/locales/{lang}.yml')
-        lang = yaml.load(stream, Loader=yaml.Loader)
-        if flask is None:
-            mode = 'light'
-        else:
-            mode = f'{flask.session.get("value")}'
+    def date_now():
+        return datetime.datetime.now()
 
-        data = {
-            'ln': lang,
-            'mode': mode
-        }
-        return data
