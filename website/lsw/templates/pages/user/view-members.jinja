@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for member in members %}
+            {% for member in members.items %}
                 <tr>
                     <th scope="row">{{ member.id }}</td>
                     <td>{{ member.name }}</td>
@@ -41,6 +41,20 @@
             {% endfor %}
         </tbody>
     </table>
+
+    <div class=pagination>
+      {% for page in members.iter_pages() %}
+        {% if page %}
+          {% if page != members.page %}
+            <a class="btn m-1 btn-primary" href="{{ url_for('user.view_members', page=page) }}">{{ page }}</a>
+          {% else %}
+            <a class="btn m-1 btn-dark">{{ page }}</a>
+          {% endif %}
+        {% else %}
+          <span class=ellipsis>…</span>
+        {% endif %}
+      {% endfor %}
+    </div>
     </div>
 {% endblock body %}
 
