@@ -38,10 +38,10 @@ class User(db.Model, fl.UserMixin):
     def __repr__(self):
         return f"<User '{self.id[-6:]}': '{self.email}'>"
 
-    def set_roles(self, roles: list[str]):
+    def set_roles(self, roles: list):
         self.roles = ','.join(roles)
 
-    def get_roles(self) -> list[str]:
+    def get_roles(self) -> list:
         return self.roles.split(",")
 
     def has_role(self, role: str) -> bool:
