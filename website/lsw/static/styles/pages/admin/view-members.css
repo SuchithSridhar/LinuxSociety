@@ -1,0 +1,16 @@
+body {
+  font-family: var(--regular-font);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 95vh;
+  margin: 0;
+}
+
+.table {
+  --bs-table-bg: var(--background-color);
+  --bs-table-color: var(--text-color);
+}
+
+.container {
+  background: none;
+}

@@ -14,29 +14,34 @@
 
 <form action="" method='post'>
     <div class="form-group">
-        <label for='name'>Name</label>
-        <input name='name' type="text">
+        <label for='name-input'>Name</label>
+        <input id='name-input' name='name' type="text">
     </div>
 
     <div class="form-group">
-        <label for='primary-email'>Primary Email</label>
-        <input name='primary-email' type="text" placeholder='abc.xyz@exmaple.com'>
+        <label for='primary-email-input'>Primary Email</label>
+        <input id='primary-email-input' name='primary-email' type="text" placeholder='abc.xyz@exmaple.com'>
         <small class="form-text">Can be the same as University Email</small>
     </div>
 
     <div class="form-group">
-        <label for='university-email'>University Email <span class='form-text'>(optional)</span> </label>
-        <input name='university-email' type="text" placeholder='abc.xyz@dal.ca'>
+        <label for='university-email-input'>University Email <span class='form-text'>(optional)</span> </label>
+        <input id='university-email-input' name='university-email' type="text" placeholder='abc.xyz@dal.ca'>
     </div>
 
     <div class="form-group">
-        <label for='student-id'>Student ID <span class='form-text'>(optional)</span>  </label>
-        <input name='student-id' type="text" placeholder="B00111111">
+        <label for='student-id-input'>Student ID <span class='form-text'>(optional)</span>  </label>
+        <input id='student-id-input' name='student-id' type="text" placeholder="B00111111">
     </div>
 
     <div class="form-group">
-        <label for='program'>Program <span class='form-text'>(optional)</span>  </label>
-        <input name='program' type="text" placeholder="Bachelors of Computer Science">
+        <label for='program-input'>Program <span class='form-text'>(optional)</span>  </label>
+        <input id='program-input' name='program' type="text" placeholder="Bachelors of Computer Science">
+    </div>
+
+    <div class="form-group">
+        <label for='year-of-study-input'>Year of Study <span class='form-text'>(optional)</span>  </label>
+        <input id='year-of-study-input' type="number" min="1" max="6" step="1" name='year-of-study'>
     </div>
 
     <div class="form-group">
