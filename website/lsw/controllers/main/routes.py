@@ -41,7 +41,8 @@ def register_post():
         student_id=data['student-id'],
         primary_email=data['primary-email'],
         university_email=data['university-email'],
-        event_notification=data['event-notification']
+        event_notification=data['event-notification'],
+        year_of_study=data['year-of-study']
     )
 
     db.session.add(item)
