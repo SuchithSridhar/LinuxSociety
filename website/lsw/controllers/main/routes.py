@@ -22,6 +22,7 @@ def register_post():
         'primary-email': '',
         'university-email': '',
         'student-id': '',
+        'year-of-study': '',
         'program': '',
         'event-notification': 'yes',
     }
@@ -32,7 +33,7 @@ def register_post():
     # Convert string to boolean
     data['event-notification'] = data['event-notification'] == 'yes'
 
-    #TODO: Perform checks before creating new item
+    # TODO: Perform checks before creating new item
     # - Check if member is already registered.
     # - Perform validation on all fields.
     item = models.Member(
