@@ -97,6 +97,16 @@ form button:hover {
   border: var(--nav-link-alt-hi-color) solid 1px;
 }
 
+div.error-container:empty {
+  display: none;
+}
+
+div.error-container {
+  color: red;
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+
 @media only screen and (max-width: 980px) {
   h1 {
     font-size: 2rem;

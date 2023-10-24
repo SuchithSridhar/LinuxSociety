@@ -16,32 +16,38 @@
     <div class="form-group">
         <label for='name-input'>Name</label>
         <input id='name-input' name='name' type="text">
+        <div class='error-container' id='name-errors'></div>
     </div>
 
     <div class="form-group">
         <label for='primary-email-input'>Primary Email</label>
-        <input id='primary-email-input' name='primary-email' type="text" placeholder='abc.xyz@exmaple.com'>
+        <input id='primary-email-input' name='primary-email' type="email" placeholder='abc.xyz@exmaple.com'>
         <small class="form-text">Can be the same as University Email</small>
+        <div class='error-container' id='primary-email-errors'></div>
     </div>
 
     <div class="form-group">
         <label for='university-email-input'>University Email <span class='form-text'>(optional)</span> </label>
-        <input id='university-email-input' name='university-email' type="text" placeholder='abc.xyz@dal.ca'>
+        <input id='university-email-input' name='university-email' type="email" placeholder='abc.xyz@dal.ca'>
+        <div class='error-container' id='university-email-errors'></div>
     </div>
 
     <div class="form-group">
         <label for='student-id-input'>Student ID <span class='form-text'>(optional)</span>  </label>
         <input id='student-id-input' name='student-id' type="text" placeholder="B00111111">
+        <div class='error-container' id='student-id-errors'></div>
     </div>
 
     <div class="form-group">
         <label for='program-input'>Program <span class='form-text'>(optional)</span>  </label>
         <input id='program-input' name='program' type="text" placeholder="Bachelors of Computer Science">
+        <div class='error-container' id='program-errors'></div>
     </div>
 
     <div class="form-group">
         <label for='year-of-study-input'>Year of Study <span class='form-text'>(optional)</span>  </label>
         <input id='year-of-study-input' type="number" min="1" max="6" step="1" name='year-of-study'>
+        <div class='error-container' id='year-of-study-errors'></div>
     </div>
 
     <div class="form-group">
@@ -54,3 +60,7 @@
     <button type='submit' class='submit-btn'>Register</button>
 </form>
 {% endblock body %}
+
+{% block script %}
+    <script src='{{url_for('static', filename='scripts/registration-validation.js')}}'></script>
+{% endblock script %}
