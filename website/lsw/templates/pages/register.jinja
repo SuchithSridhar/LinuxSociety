@@ -56,9 +56,16 @@
             <span>I would like to receive emails for events.</span>
         </div>
     </div>
-
+    <div class="form-group">
+        <div class="privacy-statement">
+            Privacy statement:
+            <a href="{{url_for('main.privacy')}}">Privacy</a>
+        </div>
+    </div>
+    
     <button type='submit' class='submit-btn'>Register</button>
 </form>
+
 {% endblock body %}
 
 {% block script %}

@@ -55,3 +55,8 @@ def register_post():
 @main_blueprint.route('/welcome')
 def welcome():
     return f.render_template('pages/welcome.jinja')
+
+
+@main_blueprint.route('/privacy')
+def privacy():
+    return f.render_template('pages/privacy.jinja')

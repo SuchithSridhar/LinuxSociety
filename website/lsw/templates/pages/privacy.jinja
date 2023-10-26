@@ -1,0 +1,74 @@
+{% extends 'layout.jinja' %}
+
+{% block head %}
+    <link 
+        rel="stylesheet" 
+        href="{{ url_for('static', filename='styles/pages/text-pages.css') }}"
+    >
+{% endblock head %}
+
+{% block body %}
+    <div class="container">
+        <h1>Privacy Statement</h1>
+
+        <p>
+            The Linux Club at Dalhousie University is committed to maintaining
+            the privacy and protection of your personal data. This Privacy
+            Statement outlines the nature of data we collect, the purpose for
+            which it's used, and the security measures we have instituted.
+        </p>
+
+        <p>
+            When users register on our website, we collect specific personal
+            information including, but not limited to, the full name and email
+            address, program of study, university email, student ID. Any other
+            relevant data fields that are collected will be transparently
+            communicated during the registration process.
+        </p>
+
+        <p>
+            The primary objective behind our data collection is twofold. First,
+            we aim to create a comprehensive members' list for the Linux Club.
+            This aids in organizational and administrative processes. Second,
+            with the user's express consent, we use the collected email
+            addresses to send out notifications about upcoming events.
+        </p>
+
+        <p>
+            Our data storage protocols adhere to security standards. All
+            collected information is securely stored in a database on a Virtual
+            Private Server (VPS). Measures have been employed to shield against
+            unauthorized access, modifications, or potential breaches. You can 
+            view details on how this is done by reviewing the code for this
+            website here:
+            <a href="https://github.com/Suchithsridhar/LinuxSociety/">
+                Github.
+            </a>
+        </p>
+
+        <p>
+            It's essential to emphasize that under no circumstances will we
+            sell, lease, rent, or share your personal information with third
+            parties outside of the stated objectives.
+        </p>
+
+        <p>
+            Users have the autonomy to opt-out of our event-related
+            communications at any time. To facilitate this, users can directly
+            contact the current president (suchith.sridhar@dal.ca). Users also
+            can request obtain a copy of all the data we hold or request all of
+            the data to be deleted.
+        </p>
+
+        <p>
+            We retain the right to update this Privacy Statement periodically.
+            Users are encouraged to review this page to stay informed about any
+            changes and to understand how their data is being safeguarded.
+        </p>
+        
+        <p>
+            For any queries, clarifications, or feedback regarding this Privacy
+            Statement, we are reachable at suchith.sridhar@dal.ca.
+        </p>
+    </div>
+{% endblock body %}

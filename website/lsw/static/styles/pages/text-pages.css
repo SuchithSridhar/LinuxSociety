@@ -1,0 +1,39 @@
+@import url("/styles/variables.css");
+
+.container {
+  max-width: 70%;
+  margin: 100px auto 100px;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--highlight-text-color);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 980px) {
+  .container {
+    max-width: 80%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    max-width: 90%;
+    margin-top: 50px;
+  }
+
+}

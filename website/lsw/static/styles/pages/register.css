@@ -62,9 +62,6 @@ form .form-group .form-text {
   color: var(--input-subtext-color);
 }
 
-form .form-group .checkbox-container {
-}
-
 form .form-group .checkbox-container span {
   font-size: 1.4rem;
 }
@@ -74,6 +71,11 @@ form .form-group .checkbox-container input {
   height: 15px;
   margin-right: 20px;
   margin-left: 20px;
+}
+
+form .privacy-statement {
+  font-size: 1.2rem;
+  padding-left: 60px;
 }
 
 form button {
