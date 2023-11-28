@@ -1,0 +1,47 @@
+{% extends 'layout.jinja' %}
+
+{% block head %}
+    <link 
+        rel="stylesheet" 
+        href="{{ url_for('static', filename='styles/pages/text-pages.css') }}"
+    >
+{% endblock head %}
+
+{% block body %}
+    <div class="container">
+        <h1>Announcement (2023, Nov 28)</h1>
+
+        <p>
+            Hello CSCI-3120 class! I'm Suchith Sridhar, the president of the
+            Linux Society! I'm excited to talk to you about our society and its
+            functioning. We're a community dedicated to discussing and exploring
+            the possibilities of Linux and open-source software, and we'd love
+            for you to join us.
+        </p>
+
+        <p>
+            You may have noticed that Timberlea (our server) runs Linux. In
+            fact, most servers around the world use Linux. We've mostly learned
+            about the Linux kernel during class, which is largely due to its
+            open nature. It often tends to be the best way to do things at a low
+            level because developers worldwide contribute to it.
+        </p>
+
+        <p>
+            I personally use Linux because I love tinkering with my computer and
+            trying to optimize my workflow. I write scripts to automate a lot of
+            what happens on my computer. Linux facilitates this.
+        </p>
+        <p>
+            If you're interesting in Linux, you can join the society by
+            registering here: <a href="/register">Register</a>.
+        </p>
+        <p>
+            We're having an event this
+            <strong>Friday (Dec 1st, 2023) at LSC Psychology P4208</strong>,
+            which you are welcome to attend! This event is about trying
+            out Linux!
+        </p>
+
+    </div>
+{% endblock body %}

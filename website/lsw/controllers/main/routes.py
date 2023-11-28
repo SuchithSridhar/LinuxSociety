@@ -60,3 +60,11 @@ def welcome():
 @main_blueprint.route('/privacy')
 def privacy():
     return f.render_template('pages/privacy.jinja')
+
+
+@main_blueprint.route('/announcement/<date>')
+def announcement(date):
+    if date == "2023-Nov-28":
+        return f.render_template('pages/announcement-2023-11-28.jinja')
+
+    return f.redirect(f.url_for('main.index'))

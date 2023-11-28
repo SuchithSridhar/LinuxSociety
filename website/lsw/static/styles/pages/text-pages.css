@@ -15,6 +15,11 @@ h1 {
 
 p {
   font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+a {
+  color: var(--highlight-text-color);
 }
 
 @media only screen and (max-width: 980px) {
@@ -27,6 +32,7 @@ p {
   }
   p {
     font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 }
 
