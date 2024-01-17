@@ -17,6 +17,10 @@ def login():
         password = f.request.form['password']
 
         user: models.User = user_utils.authenticate_user(email, password)
+        if (user is None):
+            return f.render_template(
+                'pages/user/login.jinja', title='User Login'
+            )
 
         fl.login_user(user)
         next_page = f.request.args.get('next')
