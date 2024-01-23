@@ -11,11 +11,11 @@ def load_user(user_id):
 class Member(db.Model):
     __tablename__ = 'member'
     id = db.Column(db.String, primary_key=True, default=Utils.create_uuid)
-    name = db.Column(db.String, unique=False, nullable=False)
-    program = db.Column(db.String, unique=False, nullable=True)
-    student_id = db.Column(db.String, unique=True, nullable=True)
-    primary_email = db.Column(db.String, unique=True, nullable=False)
-    university_email = db.Column(db.String, unique=True, nullable=True)
+    name = db.Column(db.String, nullable=False)
+    program = db.Column(db.String, nullable=True)
+    student_id = db.Column(db.String, nullable=True)
+    primary_email = db.Column(db.String, nullable=False)
+    university_email = db.Column(db.String, nullable=True)
     registration_date = db.Column(db.DateTime, default=Utils.date_now)
     event_notification = db.Column(db.Boolean, default=True)
     year_of_study = db.Column(db.Integer)
