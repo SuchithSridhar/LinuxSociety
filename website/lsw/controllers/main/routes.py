@@ -1,6 +1,7 @@
 import flask as f
 from ... import models
 from ... import db
+from ...utils import Utils
 
 main_blueprint = f.Blueprint('main', __name__)
 
@@ -19,9 +20,9 @@ def register():
 def register_post():
     data = {
         'name': '',
-        'primary-email': '',
-        'university-email': '',
-        'student-id': '',
+        'primary-email': Utils.create_uuid(),
+        'university-email': Utils.create_uuid(),
+        'student-id': Utils.create_uuid(),
         'year-of-study': '',
         'program': '',
         'event-notification': 'no',
