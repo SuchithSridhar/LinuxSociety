@@ -24,11 +24,13 @@ def register_post():
         'student-id': '',
         'year-of-study': '',
         'program': '',
-        'event-notification': 'yes',
+        'event-notification': 'no',
     }
 
     for key in data:
-        data[key] = f.request.form[key]
+        value = f.request.form.get(key, "")
+        if (value != ""):
+            data[key] = value
 
     # Convert string to boolean
     data['event-notification'] = data['event-notification'] == 'yes'
