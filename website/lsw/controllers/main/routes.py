@@ -71,3 +71,8 @@ def announcement(date):
         return f.render_template('pages/announcement-2023-11-28.jinja')
 
     return f.redirect(f.url_for('main.index'))
+
+
+@main_blueprint.route('/robots.txt')
+def robots():
+    return f.render_template('pages/welcome.jinja')
